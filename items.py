@@ -16,22 +16,6 @@ class Weapon(Item):
     def __str__(self):
         return ""
 
-
-class Dagger(Weapon):
-    def __init__(self):
-        super().__init__(name="Dagger",
-                         description="A small dagger with some rust. Somewhat more dangerous than a rock.",
-                         damage=2,
-                         techniques={'tech_1': 'Stab',
-                                     'tech_2': 'Slice'})
-
-class Fists(Weapon):
-    def __init__(self):
-        super().__init__(name="Fists",
-                         description="They're just fists",
-                         damage=2,
-                         techniques={'tech_1': 'Punch',
-                                     'tech_2': 'Smack'})
 class Key(Item):
     """The player must have the Key item to walk through doors"""
     def __init__(self):

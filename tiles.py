@@ -231,88 +231,6 @@ class HealingFountain(MapTile):
     def modify_player(self):
         config.player.hp = 16
 
-class GiantSpiderRoom(EnemyRoom):
-    def __init__(self, x, y):
-        super().__init__(x, y, enemies.GiantSpider())
- 
-    def intro_text(self):
-        if self.enemy.is_alive():
-            return """
-            A giant spider jumps down from its web in front of you!
-            """
-        else:
-            return """
-            The corpse of a dead spider rots on the ground.
-            """
-
-class OgreRoom(EnemyRoom):
-    def __init__(self, x, y):
-        super().__init__(x, y, enemies.Ogre())
-
-    def intro_text(self):
-        if self.enemy.is_alive():
-            return """
-            A vicious, giant ogre wobbles towards you with a huge belly and
-            long dangly arms.
-            """
-        else:
-            return """
-            You see the remains from the intense skirmish with the ogre.
-            """
-class ImpRoom(EnemyRoom):
-    def __init__(self, x, y):
-        super().__init__(x, y, enemies.Imp())
-
-    def intro_text(self):
-        if self.enemy.is_alive():
-            return """
-            You hear a deafening screech above you just as a vicious looking,
-            fiery imp flies towards you. It has large, thin wings and a
-            disgusting, unprotected head.
-            """
-        else:
-            return """
-            You see the scorch marks from your battle with the imp.
-            """
-
-class DraugrRoom(EnemyRoom):
-    def __init__(self, x, y):
-        super().__init__(x, y, enemies.Draugr())
-
-    def intro_text(self):
-        if self.enemy.is_alive():
-            return """
-            As you make your way through the cavern, you hear what sounds like chimes. Suddenly, a rotten Draugr crawls out of a nearby coffin, equipped with a huge broadsword. It is wearing rusted armor, with an exposed ribcageand pelvis. He immediately sees you and attacks.
-            """
-        else:
-            return """
-            You see a pile of bones.
-            """
- 
-class FinalBoss(EnemyRoom):
-    def __init__(self, x, y):
-        super().__init__(x, y, enemies.TieflingKing())
-
-    def intro_text(self):
-        if self.enemy.is_alive():
-            return """
-            insert dramatic boss description and let the battle commence.
-            """
-        else:
-            return """
-            You see the entrance ahead of you. Victory is within your grasp!
-            """ 
-class FindDaggerRoom(LootRoom):
-    def __init__(self, x, y):
-        super().__init__(x, y, items.Dagger())
-        
-    def intro_text(self):
-        if len(self.item) >= 1:
-            return """\nYou notice a large rug in the center of the room"""
-        else:
-            return """
-            An unremarkable part of the cave. You must forge onwards.
-            """
         
 class FindKeyTile(LootRoom):
     def __init__(self, x, y):
@@ -335,3 +253,5 @@ class LeaveCaveRoom(MapTile):
  
     def modify_player(self, player):
         player.victory = True
+
+

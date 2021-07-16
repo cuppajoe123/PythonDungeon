@@ -58,8 +58,8 @@ class Player():
         popped_item = item.pop()
         self.inventory.append(popped_item)
         
-#   def look_around(self):
-#       print(self.room_text)
+
+#Add any more actions here
 
     def do_action(self, action, **kwargs):
         action_method = getattr(self, action.method.__name__)

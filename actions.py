@@ -33,10 +33,11 @@ class ViewInventory(Action):
     """Prints the player's inventory"""
     def __init__(self):
         super().__init__(method=Player.print_inventory, display_name='View inventory', input_names=['View inventory'])
-        
-class EquipDagger(Action):
-    def __init__(self):
-        super().__init__(method=Player.equip_dagger, display_name='Equip dagger', input_names=['Equip dagger'])
+
+"""An example of an equip wrapper class."""
+#class EquipDagger(Action):
+#    def __init__(self):
+#        super().__init__(method=Player.equip_dagger, display_name='Equip dagger', input_names=['Equip dagger'])
         
 class Attack(Action):
     config.init()
