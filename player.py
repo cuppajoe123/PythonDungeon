@@ -3,6 +3,7 @@ import items, world
 class Player(): 
     """Defines all player attributes and actions"""
     def __init__(self):
+        self.easy_mode = True
         self.inventory = []
         self.hp = 16
         self.location_x, self.location_y = world.starting_position
@@ -11,7 +12,11 @@ class Player():
         self.available_attacks = []
         self.grab_string = []
 #       self.room_text = "This is the default room text."
- 
+
+    def turn_off_easy_mode(self):
+        self.easy_mode = False
+        print("Easy mode off")
+
     def is_alive(self):
         return self.hp > 0
  

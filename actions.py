@@ -49,6 +49,9 @@ class GrabItem(Action):
     def __init__(self, item):
         super().__init__(method=Player.grab, display_name='', input_names=config.player.grab_string, item=item)
         
+class TurnOffEasyMode(Action):
+    def __init__(self):
+        super().__init__(method=Player.turn_off_easy_mode, display_name='Turn easy mode off', input_names='Turn easy mode off')
 #class LookAround(Action):
 #   def __init__(self):
 #       super().__init__(method=Player.look_around, display_name='Look around', input_names=['Look around'])
