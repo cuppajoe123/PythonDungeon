@@ -33,3 +33,6 @@ The developer can easily design their own levels with the tiles they create by t
 
 ## Tiles (tiles.py)
 The game world is made of tiles. The player is always on a single tile. A parent class for making lootrooms and enemy rooms is provided. Lootrooms must be supplied an item and enemy rooms must be supplied an enemy. All tiles have an intro text which is generally used to describe to the player what the room looks like. Each room also has a list of available actions that the player can perform, such as moving to adjacent tiles and picking up items. Their are also doors in which the player must have the appropriate key to move through.
+
+### Credit
+I started this project by doing a tutorial I found online. Some of the code may be from that, so I just wanted to give it credit. https://letstalkdata.com/2014/08/how-to-write-a-text-adventure-in-python/ 
