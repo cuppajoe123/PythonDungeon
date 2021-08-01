@@ -22,7 +22,7 @@ class Player():
  
     def print_inventory(self):
         for item in self.inventory:
-            print(item, '\n')
+            print(item.name, '\n')
 
     def move(self, dx, dy):
         self.location_x += dx
