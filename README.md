@@ -1,11 +1,11 @@
-# YAPTA
+# Python Dungeon
 
 Yet Another Python Text Adventure
 
-YAPTA is an easy-to-use template for creating your very own Python text adventure. The base game mechanics are already implemented so the developer can focus on creating assets for their adventure. Each game mechanic was built with extensibility in mind so that developers can spend their time working on game assets. Only a fundamental knowledge of Python is needed to use this project, although adding your own features may prove more difficult. Documentation is provided for each game mechanic.
+Python Dungeon is an easy-to-use template for creating your very own Python text adventure. The base game mechanics are already implemented so the developer can focus on creating assets for their adventure. Each game mechanic was built with extensibility in mind so that developers can spend their time working on game assets. Only a fundamental knowledge of Python is needed to use this project, although adding your own features may prove more difficult. Documentation is provided for each game mechanic.
 
 ## Installation
-python-dungeon depends on only one Python package not in the standard library. Use `pip install xlrd` to install the necessary module. It is needed for the program to parse the spreadsheet file.
+python-dungeon-demo depends on only one Python package not in the standard library. Use `pip install xlrd` to install the necessary module. It is needed for the program to parse the spreadsheet file.
 
 ## How the game works
 The player navigates a world using cardinal directions. The player and enemy actions are split up into turns. The player has the ability to pick up items, chiefly weapons and keys, as well as fight enemies. Combat is turnbased. The enemy starts the encounter. The player must determine the enemies weakness(es) as well as how to properly use their weapon to land an attack. The player starts the game in the StartingRoom tile, and must reach the LeaveCaveRoom in order to win. 
