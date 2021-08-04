@@ -1,7 +1,7 @@
 import world, config, tiles
 from player import Player
 
- 
+
 def play():
     """Main gameplay loop"""
     world.load_tiles()
@@ -22,9 +22,7 @@ def play():
                 if action_input in action.input_names:
                     config.player.do_action(action, **action.kwargs)
                     break
-                
-                
-    
+
 
 if __name__ == "__main__":
     play()

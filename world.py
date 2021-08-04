@@ -2,7 +2,8 @@ import xlrd
 
 _world = {}
 starting_position = (0, 0)
- 
+
+
 def load_tiles():
     """Parses a file that describes the world space into the _world object"""
     loc = ("resources/map.xls")
@@ -15,6 +16,7 @@ def load_tiles():
                 global starting_position
                 starting_position = (x, y)
             _world[(x, y)] = None if tile_name == '' else getattr(__import__('tiles'), tile_name)(x, y)
-            
+
+
 def tile_exists(x, y):
     return _world.get((x, y))
