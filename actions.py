@@ -24,45 +24,36 @@ class MoveNorth(Action):
 class MoveSouth(Action):
     def __init__(self):
         super().__init__(method=Player.move_south, display_name='Move south', input_names=['Move south'])
- 
+
 
 class MoveEast(Action):
     def __init__(self):
         super().__init__(method=Player.move_east, display_name='Move east', input_names=['Move east'])
- 
+
 
 class MoveWest(Action):
     def __init__(self):
         super().__init__(method=Player.move_west, display_name='Move west', input_names=['Move west'])
- 
+
 
 class ViewInventory(Action):
     """Prints the player's inventory"""
     def __init__(self):
         super().__init__(method=Player.print_inventory, display_name='View inventory', input_names=['View inventory'])
 
-"""An example of an equip wrapper class."""
-#class EquipDagger(Action):
-#    def __init__(self):
-#        super().__init__(method=Player.equip_dagger, display_name='Equip dagger', input_names=['Equip dagger'])
-        
 
 class Attack(Action):
     config.init()
     def __init__(self, enemy):
         super().__init__(method=Player.attack, display_name='Attack!', input_names=config.player.available_attacks, enemy=enemy)
-        
+
 
 class GrabItem(Action):
     config.init()
     def __init__(self, item):
         super().__init__(method=Player.grab, display_name='', input_names=config.player.grab_string, item=item)
-        
+
 
 class TurnOffEasyMode(Action):
     def __init__(self):
         super().__init__(method=Player.turn_off_easy_mode, display_name='Turn easy mode off', input_names='Turn easy mode off')
-#class LookAround(Action):
-#   def __init__(self):
-#       super().__init__(method=Player.look_around, display_name='Look around', input_names=['Look around'])
-
